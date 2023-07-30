@@ -1,18 +1,37 @@
-#include "Contact.h"
+#include "Contact.hpp"
 
-void Contact::set_fname(std::string fname)
+
+std::string	Contact::get_firstname() 
 {
-    this->first_name = fname;
+	return (this->firstname);
 }
 
-std::string Contact::get_fname()
+std::string	Contact::get_lastname() 
 {
-    return (this->first_name);
+	return (this->lastname);
 }
 
-int main()
+std::string	Contact::get_nickname() 
 {
-    Contact one;
-    one.set_fname("bob");
-    std::cout << one.get_fname() ;
+	return (this->nickname);
+}
+
+std::string	Contact::get_secret() 
+{
+	return (this->secret);
+}
+
+std::string	Contact::get_number()
+{
+	return (this->number);
+}
+
+
+void Contact::set_contact(std::string data[4])
+{
+	this->firstname = data[0];
+	this->lastname = data[1];
+	this->nickname = data[2];
+	this->number = data[3];
+	this->secret = data[4];
 }
